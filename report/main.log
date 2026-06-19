@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.1)  19 JUN 2026 15:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.1)  19 JUN 2026 15:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -425,7 +425,7 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 23.
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count333
 )
-No file main.aux.
+(./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
@@ -448,6 +448,7 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
 LaTeX Info: Redefining \it@ocap on input line 32.
 LaTeX Info: Redefining \it@ccap on input line 32.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -506,49 +507,30 @@ e
 ))
 \c@lstlisting=\count340
 Package hyperref Info: Link coloring ON on input line 32.
+
+(./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-
-Overfull \hbox (71.56108pt too wide) in paragraph at lines 51--53
-[]\T1/cmr/bx/n/10.95 Arrotondamento del-le coor-di-na-te \T1/cmr/m/n/10.95 al-l
-a pri-ma ci-fra de-ci-ma-le con \T1/cmtt/m/n/10.95 HALF_UP \T1/cmr/m/n/10.95 e 
-uti-liz-zo di \T1/cmtt/m/n/10.95 java.math.BigDecimal
- []
-
-[1
+ [1
 
 {/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
 al/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
-
-LaTeX Warning: Reference `tab:bench_n4' on page 2 undefined on input line 152.
-
-
-LaTeX Warning: Reference `tab:bench_n2' on page 2 undefined on input line 152.
-
-
 Overfull \hbox (2.99597pt too wide) in paragraph at lines 151--155
 \T1/cmr/m/n/10.95 L'esecuzione dei 35 te-st to-ta-li è sta-to rea-liz-za-ta at-
 tra-ver-so lo script py-thon au-to-ma-tiz-za-to \T1/cmtt/m/n/10.95 benchmark.py
 \T1/cmr/m/n/10.95 .
  []
 
-
-Overfull \hbox (5.99883pt too wide) in paragraph at lines 151--155
-\T1/cmr/m/n/10.95 le [] e [] ri-por-ta-no i tem-pi di ese-cu-zio-ne mi-su-ra-ti
-, ri-spet-ti-va-men-te per \T1/cmtt/m/n/10.95 n2-standard-4 \T1/cmr/m/n/10.95 e
- \T1/cmtt/m/n/10.95 n2-standard-2\T1/cmr/m/n/10.95 . 
- []
-
 [2]
-<media/plot_times_n4.png, id=43, 715.473pt x 316.5426pt>
+<media/plot_times_n4.png, id=90, 715.473pt x 316.5426pt>
 File: media/plot_times_n4.png Graphic file (type png)
 <use media/plot_times_n4.png>
 Package pdftex.def Info: media/plot_times_n4.png  used on input line 193.
 (pdftex.def)             Requested size: 237.01411pt x 104.86028pt.
-<media/plot_times_n2.png, id=45, 715.473pt x 316.5426pt>
+<media/plot_times_n2.png, id=92, 715.473pt x 316.5426pt>
 File: media/plot_times_n2.png Graphic file (type png)
 <use media/plot_times_n2.png>
 Package pdftex.def Info: media/plot_times_n2.png  used on input line 198.
@@ -560,18 +542,18 @@ sk con-cor-ren-ti. Su un clu-ster con 4 wor-ker \T1/cmtt/m/n/10.95 n2-standard-
 2
  []
 
-<media/plot_partitions.png, id=46, 643.203pt x 352.6776pt>
+<media/plot_partitions.png, id=93, 643.203pt x 352.6776pt>
 File: media/plot_partitions.png Graphic file (type png)
 <use media/plot_partitions.png>
 Package pdftex.def Info: media/plot_partitions.png  used on input line 226.
 (pdftex.def)             Requested size: 435.32422pt x 238.69824pt.
 [3 <./media/plot_times_n4.png> <./media/plot_times_n2.png>]
-<media/plot_speedup.png, id=57, 496.7358pt x 316.5426pt>
+<media/plot_speedup.png, id=101, 496.7358pt x 316.5426pt>
 File: media/plot_speedup.png Graphic file (type png)
 <use media/plot_speedup.png>
 Package pdftex.def Info: media/plot_speedup.png  used on input line 259.
 (pdftex.def)             Requested size: 237.01411pt x 151.03549pt.
-<media/plot_efficiency.png, id=58, 497.2176pt x 316.5426pt>
+<media/plot_efficiency.png, id=102, 497.2176pt x 316.5426pt>
 File: media/plot_efficiency.png Graphic file (type png)
 <use media/plot_efficiency.png>
 Package pdftex.def Info: media/plot_efficiency.png  used on input line 264.
@@ -585,7 +567,7 @@ tram-be le con-fi-gu-ra-zio-ni hard-ware: sull'\T1/cmtt/m/n/10.95 n2-standard-2
 
 [4 <./media/plot_partitions.png> <./media/plot_speedup.png> <./media/plot_effic
 iency.png>]
-<media/cooccorrenze.png, id=70, 1517.16812pt x 817.0525pt>
+<media/cooccorrenze.png, id=113, 1517.16812pt x 817.0525pt>
 File: media/cooccorrenze.png Graphic file (type png)
 <use media/cooccorrenze.png>
 Package pdftex.def Info: media/cooccorrenze.png  used on input line 302.
@@ -595,30 +577,17 @@ Package pdftex.def Info: media/cooccorrenze.png  used on input line 302.
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  96BCA35EB7CED7692C7B0CA2E008DDA0;2156.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 96BCA35EB7CED7692C7B0CA2E008DDA0;2156.
  ) 
 Here is how much of TeX's memory you used:
- 14481 strings out of 467525
- 228614 string characters out of 5418983
- 675925 words of memory out of 5000000
- 43205 multiletter control sequences out of 15000+600000
+ 14503 strings out of 467525
+ 228900 string characters out of 5418983
+ 676613 words of memory out of 5000000
+ 43221 multiletter control sequences out of 15000+600000
  641909 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,79p,259b,584s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,79p,299b,584s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
@@ -634,10 +603,10 @@ ve/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive
 /2026/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2
 026/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/202
 6/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on main.pdf (5 pages, 794012 bytes).
+Output written on main.pdf (5 pages, 795137 bytes).
 PDF statistics:
- 153 PDF objects out of 1000 (max. 8388607)
- 102 compressed objects within 2 object streams
+ 195 PDF objects out of 1000 (max. 8388607)
+ 144 compressed objects within 2 object streams
  31 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 135 words of extra memory for PDF output out of 10000 (max. 10000000)
 
