@@ -1,8 +1,7 @@
 # Progetto di Scalable and Cloud Programming
 
 **Alma Mater Studiorum — Università di Bologna**
-
-Anno Accademico 2025/2026 — Marzia De Maina (mat. 0001194461)
+ *Marzia De Maina (mat. 0001194461) — Anno Accademico 2025/2026*
 
 ---
 
