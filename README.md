@@ -78,7 +78,6 @@ EarthquakeCooccurrence <inputPath> <outputPath> [numPartitions]
 |-----------|-------------|---------|
 | `inputPath` | Percorso del CSV di input (locale o `gs://`) | obbligatorio |
 | `outputPath` | Percorso della directory di output (locale o `gs://`) | obbligatorio |
-| `numPartitions` | Numero di partizioni Spark | `8` |
 
 ### Esecuzione locale
 
@@ -114,8 +113,6 @@ gsutil mb -l europe-west1 gs://<BUCKET>
 ```
 
 **1. Carica il dataset su Google Cloud Storage:**
-
-Il dataset è scaricabile da [Kaggle — Earthquake Dataset](https://www.kaggle.com/datasets/usgs/earthquake-database) oppure da altra fonte pubblica USGS. Una volta scaricato il CSV:
 
 ```bash
 gsutil cp /path/to/dataset-earthquakes.csv \
