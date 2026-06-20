@@ -96,14 +96,43 @@ spark-submit \
 
 ### Esecuzione su Google Cloud Dataproc
 
-**1. Carica il JAR su Google Cloud Storage:**
+> Sostituisci `<PROJECT_ID>` con il tuo ID progetto GCP e `<BUCKET>` con il nome del tuo bucket Cloud Storage.
+
+**0. Prerequisiti GCP**
+
+Assicurati di aver abilitato le API necessarie e di essere autenticato:
 
 ```bash
+gcloud auth login
+gcloud config set project <PROJECT_ID>
+
+# Abilita le API richieste
+gcloud services enable dataproc.googleapis.com storage.googleapis.com
+
+# Crea un bucket (se non esiste già)
+gsutil mb -l europe-west1 gs://<BUCKET>
+```
+
+**1. Carica il dataset su Google Cloud Storage:**
+
+Il dataset è scaricabile da [Kaggle — Earthquake Dataset](https://www.kaggle.com/datasets/usgs/earthquake-database) oppure da altra fonte pubblica USGS. Una volta scaricato il CSV:
+
+```bash
+gsutil cp /path/to/dataset-earthquakes.csv \
+  gs://<BUCKET>/data/dataset-earthquakes.csv
+```
+
+**2. Compila e carica il JAR su Google Cloud Storage:**
+
+```bash
+cd IdeaProjects/earthquake-cooccurrence
+sbt assembly
+
 gsutil cp target/scala-2.12/earthquake-cooccurrence-assembly-1.0.jar \
   gs://<BUCKET>/jars/earthquake-cooccurrence-assembly-1.0.jar
 ```
 
-**2. Crea un cluster Dataproc:**
+**3. Crea un cluster Dataproc:**
 
 ```bash
 gcloud dataproc clusters create earthquake-cluster \
@@ -115,7 +144,7 @@ gcloud dataproc clusters create earthquake-cluster \
   --worker-boot-disk-size=240
 ```
 
-**3. Sottometti il job:**
+**4. Sottometti il job:**
 
 ```bash
 gcloud dataproc jobs submit spark \
@@ -124,18 +153,18 @@ gcloud dataproc jobs submit spark \
   --class=earthquake.EarthquakeCooccurrence \
   --jars=gs://<BUCKET>/jars/earthquake-cooccurrence-assembly-1.0.jar \
   -- \
-  gs://<BUCKET>/data/dataset-earthquakes-full.csv \
+  gs://<BUCKET>/data/dataset-earthquakes.csv \
   gs://<BUCKET>/output/run1 \
   128
 ```
 
-**4. Leggi l'output:**
+**5. Leggi l'output:**
 
 ```bash
 gsutil cat gs://<BUCKET>/output/run1/part-00000
 ```
 
-**5. Elimina il cluster (per risparmiare costi):**
+**6. Elimina il cluster (per risparmiare costi):**
 
 ```bash
 gcloud dataproc clusters delete earthquake-cluster \
