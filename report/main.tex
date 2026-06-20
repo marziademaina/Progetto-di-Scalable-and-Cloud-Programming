@@ -53,9 +53,7 @@ Il pre-processing sui dati grezzi è avvenuto come segue:
     \item[-] \textbf{Deduplicazione} delle terne \texttt{(lat, lon, data)}.
 \end{itemize}
 
-% =========================================================================
 \section{Approccio implementato}
-% =========================================================================
 
 L'approccio implementato si basa sul paradigma \textit{map-reduce} di
 Spark e sfrutta le RDD per controllare in modo esplicito le fasi di
@@ -65,11 +63,11 @@ trasformazione e aggregazione.
 Per ridurre l'occupazione di memoria e velocizzare lo shuffle, le strutture
 dati usate sono volutamente compatte:
 \begin{itemize}
-    \item[-] Ogni cella geografica è rappresentata dalla \texttt{case class}
+    \item[-] ogni cella geografica è rappresentata dalla \texttt{case class}
     \texttt{Cell(latTenths: Int, lonTenths: Int)}, che memorizza la
     coordinata arrotondata come intero moltiplicato per dieci
     (es. $38{,}8 \rightarrow 388$).
-    \item[-] Ogni data è codificata come \texttt{Int} nel formato
+    \item[-] ogni data è codificata come \texttt{Int} nel formato
     \texttt{YYYYMMDD} (es. $2024{-}03{-}12 \rightarrow 20240312$).
 \end{itemize}
 
@@ -123,9 +121,7 @@ errori di out-of-memory (Container killed, exit code 143) sui worker.
 La pipeline basata su \texttt{aggregateByKey} è invece risultata stabile
 in tutte le configurazioni testate.
 
-% =========================================================================
 \section{Analisi}
-% =========================================================================
 
 \subsection{Setup sperimentale}
 Gli esperimenti sono stati eseguiti sul \textbf{dataset completo}
