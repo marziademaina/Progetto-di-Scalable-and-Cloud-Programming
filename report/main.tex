@@ -46,11 +46,11 @@ di record) tramite cluster Spark gestiti su Google Cloud Dataproc.
 \subsection{Pre-processing sui dati}
 Il pre-processing sui dati grezzi è avvenuto come segue:
 \begin{itemize}
-    \item[-] \textbf{Arrotondamento delle coordinate} alla prima cifra
-    decimale con \texttt{HALF\_UP} e utilizzo di \\\texttt{java.math.BigDecimal} per evitare le imprecisioni del floating point.
-    \item[-] \textbf{Estrazione della sola data} dall'istante temporale, così
-    che la finestra di co-occorrenza sia di un giorno.
-    \item[-] \textbf{Deduplicazione} delle terne \texttt{(lat, lon, data)}.
+    \item[-] \textbf{arrotondamento delle coordinate} alla prima cifra
+    decimale con \texttt{HALF\_UP} e utilizzo di \\\texttt{java.math.BigDecimal} per evitare le imprecisioni del floating point;
+    \item[-] \textbf{estrazione della sola data} dall'istante temporale, così
+    che la finestra di co-occorrenza sia di un giorno;
+    \item[-] \textbf{deduplicazione} delle terne \texttt{(lat, lon, data)}.
 \end{itemize}
 
 \section{Approccio implementato}
@@ -66,7 +66,7 @@ dati usate sono volutamente compatte:
     \item[-] ogni cella geografica è rappresentata dalla \texttt{case class}
     \texttt{Cell(latTenths: Int, lonTenths: Int)}, che memorizza la
     coordinata arrotondata come intero moltiplicato per dieci
-    (es. $38{,}8 \rightarrow 388$).
+    (es. $38{,}8 \rightarrow 388$);
     \item[-] ogni data è codificata come \texttt{Int} nel formato
     \texttt{YYYYMMDD} (es. $2024{-}03{-}12 \rightarrow 20240312$).
 \end{itemize}
