@@ -4,7 +4,6 @@ version := "1.0"
 
 scalaVersion := "2.12.18"
 
-// Spark è provided: non va incluso nel fat JAR (DataProc lo fornisce)
 val sparkVersion = "3.3.2"
 
 libraryDependencies ++= Seq(
